@@ -55,7 +55,8 @@ let dontgiveup = [];
 let stars = [];
 
 function setup() {
-  createCanvas(600, 600);
+  let canvas = createCanvas(600, 600);
+  canvas.parent("canvasContainer");
   // image(img2, 0, 0, 600, 600);
   image(img1, 0, 0);
   for (let i = 0; i < NUM_OF_BALLS; i++) {
@@ -237,17 +238,24 @@ class Leaves {
 function keyPressed() {
   if (keyCode === LEFT_ARROW) {
     mode--;
-  } else if (keyCode === RIGHT_ARROW) {
-    mode++;
   }
-}
-function mousePressed() {
-  let starsNumber = 50;
-  for (let i = 0; i < starsNumber; i++) {
+  if (keyCode === DOWN_ARROW) {
+    for (let i = 0; i < 20; i++) {
     let kun = new Star();
     stars.push(kun);
   }
+  }
+  else if (keyCode === RIGHT_ARROW) {
+    mode++;
+  }
 }
+// function mousePressed() {
+//   let starsNumber = 50;
+//   for (let i = 0; i < starsNumber; i++) {
+//     let kun = new Star();
+//     stars.push(kun);
+//   }
+// }
 class Star {
   constructor() {
     this.x = random(-width / 2, width / 2);
@@ -514,11 +522,11 @@ class Ball {
   }
 
   bounce() {
-    if (this.x < 100 || this.x > width-100) {
-      this.xSpd = this.xSpd * -1.2;
+    if (this.x < 150 || this.x > width-150) {
+      this.xSpd = this.xSpd * -1.5;
     }
-    if (this.y < 100 || this.y > height-100) {
-      this.ySpd = this.ySpd * -1.2;
+    if (this.y < 150 || this.y > height-150) {
+      this.ySpd = this.ySpd * -1.5;
     }
   }
   display() {
