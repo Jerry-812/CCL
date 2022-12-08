@@ -14,8 +14,10 @@ body {
 }
 
 #thiscanvas {
-  margin: 0;
-  display: block;
+ position:relative;
+ top:1110px;
+  display: flex;
+  justify-content: center;
 }
 
 p {
@@ -25,4 +27,83 @@ font-size: 36px;
 background-color: rgb(242, 180, 242);
 margin: 10px;
 padding: 10px;
+}
+#imgs3{
+  position: absolute;
+  left:950px;
+  top:150px;
+  width:300px;
+  height:300px;
+  transform: skewY(45deg);
+}
+#imgs4{
+  position: absolute;
+  left:380px;
+  top:680px;
+  width:300px;
+  height:300px;
+  transform: skewY(45deg);
+}
+#imgs5{
+  position: absolute;
+  left:820px;
+  top:680px;
+  width:300px;
+  height:300px;
+  transform: skewY(-45deg);
+}
+#imgs6{
+  position: absolute;
+  left:250px;
+  top:150px;
+  width:300px;
+  height:300px;
+  transform: skewY(-45deg);
+}
+
+#imgs{
+  position: relative;
+  margin-top: 50px;
+}
+#brief{
+  position:absolute;
+  left:480px;
+  top:450px;
+}
+#positionchange{
+  position:relative;
+  top:1110px;
+}
+#play{
+  width:100px;
+  position:relative;
+  left:80px;
+  top:550px;
+}
+#play1{
+  width:100px;
+  position:relative;
+  left:1200px;
+  top:600px;
+}
+
+#play2{
+  width:100px;
+  position:relative;
+  left:1200px;
+  top:400px;
+}
+
+#play3{
+  width:100px;
+  position:relative;
+  left:1200px;
+  top:900px;
+}
+
+#play4{
+  width:100px;
+  position:relative;
+  left:80px;
+  top:700px;
 }

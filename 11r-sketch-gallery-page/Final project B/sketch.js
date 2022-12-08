@@ -56,6 +56,7 @@ let stars = [];
 
 function setup() {
   let canvas = createCanvas(600, 600);
+  canvas.parent("thiscanvas");
   // image(img2, 0, 0, 600, 600);
   image(img1, 0, 0);
   for (let i = 0; i < NUM_OF_BALLS; i++) {
