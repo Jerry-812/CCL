@@ -587,8 +587,8 @@ function scene3() {
   }
 }
 function scene4() {
-  let width = document.body.offsetWidth;
-let height = document.body.offsetHeight;
+//   let width = document.body.offsetWidth;
+// let height = document.body.offsetHeight;
   translate(300, 300);
   background("#088B9C");
   for (let i = 0; i < stars.length/3; i++) {
