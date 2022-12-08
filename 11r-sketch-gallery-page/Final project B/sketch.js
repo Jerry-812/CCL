@@ -556,7 +556,7 @@ function scene1() {
 }
 function scene2() {
   noStroke()
-  background(120,10);
+  background(100,10);
   for (let i = 0; i < balls.length; i++) {
     balls[i].move();
     balls[i].display();
@@ -587,8 +587,7 @@ function scene3() {
   }
 }
 function scene4() {
-//   let width = document.body.offsetWidth;
-// let height = document.body.offsetHeight;
+
   translate(300, 300);
   background("#088B9C");
   for (let i = 0; i < stars.length/3; i++) {
