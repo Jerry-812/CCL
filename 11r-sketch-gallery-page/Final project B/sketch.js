@@ -271,7 +271,7 @@ class Star {
     if (this.z <= 1) {
       this.x = random(-300, 300);
       this.y = random(-300, 300);
-      this.z = width;
+      this.z = 600;
       this.isMiss = false;
     }
   }
