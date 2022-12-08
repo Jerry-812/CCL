@@ -34,7 +34,7 @@ let colors = [
 let img1;
 function preload() {
   img1 = loadImage("assets/special.jpg");
-  // img2 = loadImage("assets/lightening1.jpg");
+  
 }
 let randomColors = [];
 let youxiu = [];
@@ -56,7 +56,6 @@ let stars = [];
 
 function setup() {
   let canvas = createCanvas(600, 600);
-  canvas.parent("canvasContainer");
   // image(img2, 0, 0, 600, 600);
   image(img1, 0, 0);
   for (let i = 0; i < NUM_OF_BALLS; i++) {
@@ -523,10 +522,10 @@ class Ball {
 
   bounce() {
     if (this.x < 150 || this.x > width-150) {
-      this.xSpd = this.xSpd * -1.5;
+      this.xSpd = this.xSpd * -2;
     }
     if (this.y < 150 || this.y > height-150) {
-      this.ySpd = this.ySpd * -1.5;
+      this.ySpd = this.ySpd * -2;
     }
   }
   display() {
@@ -556,7 +555,7 @@ function scene1() {
 }
 function scene2() {
   noStroke()
-  background(0,10);
+  background(120,10);
   for (let i = 0; i < balls.length; i++) {
     balls[i].move();
     balls[i].display();
