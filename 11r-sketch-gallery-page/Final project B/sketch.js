@@ -257,9 +257,10 @@ function keyPressed() {
 // }
 class Star {
   constructor() {
-    this.x = random(-width / 2, width / 2);
-    this.y = random(-width / 2, width / 2);
-    this.z = random(0, width);
+    
+    this.x = random(-300, 300);
+    this.y = random(-300, 300);
+    this.z = random(0, 600);
 
     this.r = 25 + random(-2, 3);
     this.isMiss = false;
@@ -268,8 +269,8 @@ class Star {
   update(speed) {
     this.z -= speed;
     if (this.z <= 1) {
-      this.x = random(-width / 2, width / 2);
-      this.y = random(-width / 2, width / 2);
+      this.x = random(-300, 300);
+      this.y = random(-300, 300);
       this.z = width;
       this.isMiss = false;
     }
@@ -278,14 +279,14 @@ class Star {
   show() {
     fill(0, 0, 100);
     noStroke();
-    const nowX = map(this.x / this.z, -1, 1, -width / 2, width / 2);
-    const nowY = map(this.y / this.z, -1, 1, -width / 2, width / 2);
+    const nowX = map(this.x / this.z, -1, 1, -300, 300);
+    const nowY = map(this.y / this.z, -1, 1, -300, 300);
     if (!this.isMiss) {
       this.sx = nowX;
       this.sy = nowY;
       this.isMiss = true;
     }
-    const nowR = map(this.z, 0, width, this.r, 0);
+    const nowR = map(this.z, 0, 600, this.r, 0);
     ellipse(nowX, nowY, nowR, nowR);
 
     stroke(15, 120, 255);
@@ -588,7 +589,7 @@ function scene3() {
 function scene4() {
   let width = document.body.offsetWidth;
 let height = document.body.offsetHeight;
-  translate(width / 2, height / 2);
+  translate(300, 300);
   background("#088B9C");
   for (let i = 0; i < stars.length/3; i++) {
     stars[i].update(25);
