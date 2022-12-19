@@ -37,8 +37,8 @@ let colors = [
 ];
 let mode = 0;
 function setup() {
-  let canvas = createCanvas (600,600);
-  canvas.parent("spacewindmill");
+  let canvas = createCanvas(600,600);
+  canvas.parent("thiscanvas");
   for (let i = 0; i < NUM_OF_BALLS; i++) {
     let randomIndex = floor(random(colors.length));
     let colorName = colors[randomIndex];
